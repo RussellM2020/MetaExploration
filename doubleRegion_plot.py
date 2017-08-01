@@ -53,5 +53,5 @@ plt.title("Effect of Adding Correlated Noise in Meta Learning")
 plt.legend()
 
 #plt.show()
-plt.savefig("doubleRegionmeta.png")
+plt.savefig("doubleRegionmeta1.png")
 
