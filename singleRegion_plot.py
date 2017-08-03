@@ -9,10 +9,10 @@ a1 = read(prefix+'singleRegion-frameskip2-noNoise/Returns_seed9.csv')
 a2 = read(prefix+'singleRegion-frameskip2-noNoise-seed4/Returns_seed4.csv')
 a3 = read(prefix+'singleRegion-frameskip2-noNoise-seed15/Returns_seed15.csv')
 
-b1 = read(prefix+'singleRegion-frameskip2-addedNoise/Returns_seed9.csv')
+b1 = read(prefix+'singleRegion-frameskip2-uniNoise-seed9/Returns_seed9.csv')
 
-b2 = read(prefix+'singleRegion-frameskip2-addedNoise-seed4/Returns_seed4.csv')
-b3 = read(prefix+'singleRegion-frameskip2-addedNoise-seed15/Returns_seed15.csv')
+b2 = read(prefix+'singleRegion-frameskip2-uniNoise-seed4/Returns_seed4.csv')
+b3 = read(prefix+'singleRegion-frameskip2-uniNoise-seed15/Returns_seed15.csv')
 
 L = [a1,a2,a3,b1,b2,b3]
 for i in range(len(L)):
@@ -52,5 +52,5 @@ plt.title("Effect of Adding Correlated Noise in Meta Learning")
 plt.legend()
 
 #plt.show()
-plt.savefig("SingleRegionmeta.png")
+plt.savefig("SingleRegion_uni.png")
 
