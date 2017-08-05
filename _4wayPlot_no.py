@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns; sns.set()
 prefix = '/home/russellm/rllab/data/local/'
 
-a1 = read(prefix+'4wayTest-CorrelatedNoise-seed4/Returns_seed4.csv')
-b1 = read(prefix+'4wayTest-CorrelatedNoise-seed9/Returns_seed9.csv')
-c1 = read(prefix+'4wayTest-CorrelatedNoise-seed15/Returns_seed15.csv')
+a1 = read(prefix+'4wayTest-plain-seed4/Returns_seed4.csv')
+b1 = read(prefix+'4wayTest-plain-seed9/Returns_seed9.csv')
+c1 = read(prefix+'4wayTest-plain-seed15/Returns_seed15.csv')
 
 
 composite = np.vstack((a1[0],b1[0],c1[0]))
@@ -15,15 +15,15 @@ addedNoiseMean = np.mean(composite, axis =0)
 addedNoiseStd = np.std(composite, axis = 0)
 Iterations = range(7)
 
-#plt.ylim(0,2500)
-plt.plot(Iterations, addedNoiseMean, '-b')
-plt.fill_between(Iterations, addedNoiseMean-addedNoiseStd, addedNoiseMean+addedNoiseStd,facecolor='b',alpha=0.3)
+
+plt.plot(Iterations, addedNoiseMean, '-r')
+plt.fill_between(Iterations, addedNoiseMean-addedNoiseStd, addedNoiseMean+addedNoiseStd,facecolor='r',alpha=0.3)
 #print(composite)
 
 
 for row in composite:
     plt.scatter(Iterations, row)
-plt.savefig("4wayCorrelatedNoise.png")
+plt.savefig("4wayplain.png")
 
 
 # L = [a1,a2,a3,b1,b2,b3]
