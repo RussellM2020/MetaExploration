@@ -6,7 +6,7 @@ import tensorflow as tf
 from rllab.misc.console import query_yes_no
 from rllab.sampler.utils import testRollout
 import matplotlib
-#matplotlib.use('Agg')
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 #matplotlib.use('Agg')
 import numpy as np; np.random.seed(0)
